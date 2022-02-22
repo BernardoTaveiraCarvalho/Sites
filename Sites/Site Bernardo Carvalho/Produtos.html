@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+
+
+<body onload="load()">
+  
+  <main class="container p-3 mb-2 bg-body rounded" id="content">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Produtos magic the gathering,Magic the gathering Portugal,magic the gathering portugal">
+    <meta name="keywords" content="magic,magic the gathering, magic the gathering portugal, cartas,Magic the gathering Portugal">
+    <meta name="author" content="Bernardo Taveira Carvalho">
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <i class="bi bi-envelope"></i>
+          <strong class="me-auto"> Mensagem enviada</strong>
+          <small>Agora mesmo</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          A mensagem foi enviada com sucesso!
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div  class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Descrição</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="mail.php" method="get">
+            <div class="modal-body">
+              <div class="mb-3">
+               <label>A caixa tem 1000 cartas magic the gathering sem lands, se quiser pode ser personalizado, cazo seja preciso filtrar o custo aumenta 5€ pode comunicar comigo aqui em baixo</label>
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="nome@exemplo.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn" data-bs-dismiss="modal">Fechar</button>
+              <button type="submit"class="btn" data-bs-dismiss="modal" id="liveToastBtn7">Enviar mensagem</button>
+            </div>
+             </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Descrição</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="mail.php" method="get">
+            <div class="modal-body">
+              <div class="mb-3">
+               <label>Decks de commander com preços no minimo 25€ para listagem dos mesmos mande mensagem</label>
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="nome@exemplo.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn" data-bs-dismiss="modal">Fechar</button>
+              <button type="submit" class="btn " id="liveToastBtn1" data-bs-dismiss="modal">Enviar mensagem</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Descrição</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="mail.php" method="get">
+            <div class="modal-body">
+              <div class="mb-3">
+               <label>Decks casuais com preços por volta de 8€ será perguntado qual as cores que quer e temas caso pretenda, caso pretenda também é dada a lista do decks não será pedida quaisquer extras por isso</label>
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="nome@exemplo.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn" data-bs-dismiss="modal">Fechar</button>
+              <button  type="submit" class="btn " id="liveToastBtn1" data-bs-dismiss="modal">Enviar mensagem</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Descrição</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="mail.php" method="get">
+            <div class="modal-body">
+              <div class="mb-3">
+               <label>Decks Pauper com preços por volta de 5€ será perguntado qual as cores que quer e temas caso pretenda, caso pretenda também é dada a lista do decks não será pedida quaisquer extras por isso </label>
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="nome@exemplo.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn" data-bs-dismiss="modal">Fechar</button>
+              <button type="submit" class="btn " id="liveToastBtn1" data-bs-dismiss="modal">Enviar mensagem</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/Produtos/1000c.jpg" class="card-img-top p-2" alt="1000 cartas magic the gathering,mtg,magic the gathering">
+            <div class="card-body">
+              <h5 class="card-title">Caixa 1000 cartas</h5>
+              <p class="card-text">10€</p>
+              <button type="button" class="btn btn-primar" data-bs-toggle="modal" data-bs-target="#exampleModal">Saber mais!</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/Produtos/DecksCommander.jpg" class="card-img-top p-2" alt="Decks Commander,Baralhos commander,Commander,commander,baralhos,Baralhos">
+            <div class="card-body">
+              <h5 class="card-title">Baralhos de commander</h5>
+              <p class="card-text">25€</p>
+              <button type="button" class="btn btn-primar" data-bs-toggle="modal" data-bs-target="#exampleModal1">Saber mais!</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/Produtos/DecksCasuais.jpg" class="card-img-top p-2" alt="Decks casuais magic the gathering,Baralhos casuais magic,baralhos casuais magic">
+            <div class="card-body">
+              <h5 class="card-title">Baralhos Casuais<span class="badge ">Novo</span></h5>
+              <p class="card-text">8€</p>
+              <a href="#" class="btn" class="btn btn-primar" data-bs-toggle="modal" data-bs-target="#exampleModal2">Saber mais!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/Produtos/DecksPauper.jpg" class="card-img-top p-2" alt="Baralhos pauper magic,Baralhos pauper magic,Decks casuais magic">
+            <div class="card-body">
+              <h5 class="card-title">Baralhos Pauper</h5>
+              <p class="card-text">5€</p>
+              <a href="#" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal3" >Saber mais!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/Produtos/ComingSoon.gif" class="card-img-top p-2" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ComingSoon</h5>
+              <p class="card-text">ComingSoon</p>
+              <a href="#" class="btn " id="liveToastBtn4">ComingSoon</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/Produtos/ComingSoon.gif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ComingSoon</h5>
+              <p class="card-text">ComingSoon</p>
+              <a href="#" class="btn" id="liveToastBtn4">ComingSoon</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/Produtos/ComingSoon.gif" class="card-img-top p-2" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ComingSoon</h5>
+              <p class="card-text">ComingSoon</p>
+              <a href="#" class="btn " id="liveToastBtn5">ComingSoon</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="img/Produtos/ComingSoon.gif" class="card-img-top p-2" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ComingSoon</h5>
+              <p class="card-text">ComingSoon</p>
+              <a href="#" class="btn " id="liveToastBtn6">ComingSoon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <i class="bi bi-envelope"></i>
+            <strong class="me-auto"> Mensagem enviada</strong>
+            <small>Agora mesmo</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            A mensagem foi enviada com sucesso!
+          </div>
+        </div>
+      </div>
+      
+  </main>
+
+
+
+
+
+
+  
+</body>
+</html>
